@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="p3-feedback.css">
+    <title>Feedback</title>
+</head>
+<body>
+    <div class="container">
+            <div class="outer-wrapper">
+                <div class="previous">
+                    <a class="home-link" href="p3-home.html">	&lt; Go Back</a>
+                </div>
+                <div class="form-container">
+                    <div class="form">
+                        <h3 class="form-heading">Create New Feedback</h3>
+                        <div class="input-title">
+                            <h4 class="feedback-title">Feedback title</h4>
+                            <h6 class="title-desc">Add a short, descriptive headline</h6>
+                            <input type="text" name="title" id="title">
+                        </div>
+                        <div class="input-category">
+                            <h4 class="feedback-category">Category</h4>
+                            <h6 class="category-desc">Choose a category for your feedback</h6>
+                            <select name="category" id="category">
+                                <option value="UI">UI</option>
+                                <option value="UX">UX</option>
+                                <option value="Feature">Feature</option>
+                                <option value="Bug">Bug</option>
+                                <option value="Enhancement">Enhancement</option>
+                            </select>
+                        </div>
+                        <div class="input-detail">
+                            <h4 class="feedback-detail">Feedback Detail</h4>
+                            <p class="detail-desc">Include any comments</p>
+                            <textarea name="detail" id="detail" cols="30" rows="10" ></textarea>
+                        </div>
+                        <div class="submit-box">
+                            <a href="p3-home.html"><button id="submit-feedback" onclick="storeFeedBack()" class="submit-btn">Add Feedback</button></a>
+                            <a href="p3-home.html"><button class="cancel-btn">Cancel</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="feedback.js"></script>
+</body>
+</html>

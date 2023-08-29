@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="p3-home.css">
+    <link href="https://css.gg/css?=|chevron-double-up" rel="stylesheet">
+    <title>Product Feedback</title>
+</head>
+
+<body>
+    <div class="root">
+        <div class="container">
+            <div class="side-board">
+                <div class="logo">
+                    <p class="logo-title1">Frontend Mentor</p>
+                    <p class="logo-title2">Feedback Board</p>
+                </div>
+                <div class="filter">
+                    <button class="filter-btn">All</button>
+                    <button class="filter-btn">Enhancement</button>
+                    <button class="filter-btn">UI</button>
+                    <button class="filter-btn">UX</button>
+                    <button class="filter-btn">Bug</button>
+                    <button class="filter-btn">Feature</button>
+                </div>
+                <div class="status">
+                    <p class="heading">Roadmap<span class="">View</span></p>
+                    <p class="status-task"><span class="dot orange"></span>Planned <span class="counter">2</span></p>
+                    <p class="status-task"><span class="dot purple"></span><span class="task-name">In-Progress</span>
+                        <span class="counter">3</span>
+                    </p>
+                    <p class="status-task"><span class="dot blue"></span><span class="task-name">Live</span> <span
+                            class="counter">1</span></p>
+                </div>
+            </div>
+            <div class="main-board">
+                <div class="header">
+                    <div class="no-of-suggestion">
+                        <h3 class="sugg-text"># Suggestions</h3>
+                        <div class="selection"><label for="sorting">Sort by :</label>
+                            <select name="sorting" id="sorting">
+                                <option value="Most Upvotes">Most Upvotes</option>
+                                <option value="Least Upvotes">Least Upvotes</option>
+                                <option value="Most Comments">Most Comments</option>
+                                <option value="Least Comments">Least Comments</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="feedback-create">
+                        <a href="create-feedback.html"><button class="feedback-btn">+ Add Feedback</button></a>
+                    </div>
+                </div>
+                <div class="suggestion-board">
+                    <div id="feedback-list" class="suggestions">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="feedback.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+    color: rgb(58, 67, 116);
+}
+
+body {
+    /* background-color: #f1f1f2da; */
+    background-color: rgba(215, 214, 214, 0.379);
+    font-family: sans-serif;
+}
+
+.container {
+
+    height: fit-content;
+    width: 500px;
+    margin: auto;
+
+}
+
+.outer-wrapper {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.previous {
+
+    padding: 10px;
+
+}
+
+
+.form-container {
+
+    margin: 50px;
+
+}
+
+.home-link {
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.form-heading {
+    color: rgb(26, 107, 214);
+    font-weight: 700px;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.feedback-title,
+.feedback-category,
+.feedback-detail {
+    color: rgb(58, 67, 116);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.title-desc,
+.category-desc,
+.detail-desc {
+    color: rgb(100, 113, 150);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 29px;
+}
+
+#title,
+#category {
+    border-radius: 5px;
+    width: 400px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    background-color: rgba(215, 214, 214, 0.379);
+}
+
+#detail {
+    resize: none;
+    border-radius: 5px;
+    border: none;
+    width: 400px;
+    height: 5rem;
+    padding: 5px;
+    background-color: rgba(215, 214, 214, 0.379);
+}
+
+#title:hover,
+#category:hover,
+#detail:hover {
+    border: solid 2px #5D73E8;
+}
+
+.submit-box {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: -5px 0px 30px 0px;
+    gap:10px;
+}
+
+.submit-btn {
+    background-color: #e53ffbe6;
+    color:whitesmoke;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: 150px;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    background-color: #e124fa;
+
+}
+
+.cancel-btn{
+    color: whitesmoke;
+    background-color: #5635e9e6;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: 100px;
+}
+
+.cancel-btn:hover{
+    cursor: pointer;
+    background-color: rgb(34, 2, 140);
+}
+
