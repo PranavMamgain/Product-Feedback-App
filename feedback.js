@@ -1,8 +1,9 @@
-
-
-
+// debugger;
 window.onload = function () {
     checkArray();
+    getFeedbackId();
+    filterCategory();
+
 };
 
 function storeFeedBack() {
@@ -11,7 +12,11 @@ function storeFeedBack() {
     let categoryFeedback = document.getElementById("category");
     let detailFeedback = document.getElementById("detail");
 
+    let currentIdCounter = parseInt(localStorage.getItem('currentIdCounter')) || 0;
+
+
     const storeData = {
+        id: currentIdCounter,
         title: titleFeedback.value,
         category: categoryFeedback.value,
         detail: detailFeedback.value
@@ -21,6 +26,8 @@ function storeFeedBack() {
     let finalArray = tempArray ? tempArray : [];
     finalArray.push(storeData);
 
+    currentIdCounter++;
+    localStorage.setItem("currentIdCounter", currentIdCounter);
     localStorage.setItem("Feedbacks", JSON.stringify(finalArray));
 }
 
@@ -41,9 +48,11 @@ function showFeedback(arrayToShow) {
     showList.innerHTML = "";
 
     arrayToShow.forEach(feedback => {
-        var feedbackId = Math.random();
+        // var feedbackId = Math.random();
+        // let feedbackID
         let newFeedbackElement = document.createElement("div");
-        newFeedbackElement.setAttribute("id", feedbackId);
+        newFeedbackElement.setAttribute("id", feedback.id);
+        newFeedbackElement.setAttribute("data-selector", feedback.category);
         newFeedbackElement.setAttribute("class", "suggestion-card");
         newFeedbackElement.innerHTML = `
         <div class="upvotes-counter">
@@ -70,18 +79,29 @@ function showFeedback(arrayToShow) {
 
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const feedbackItems = document.querySelectorAll('.feedback-item');
+function getFeedbackId() {
+    const feedbackItems = document.querySelectorAll(".suggestion-link");
 
     feedbackItems.forEach(item => {
-        item.addEventListener('click', function () {
-            const feedbackId = item.getAttribute('data-feedback-id');
-            localStorage.setItem('selectedFeedbackId', feedbackId);
-            window.location.href = 'detail.html'; // Navigate to the detail page
+
+        item.addEventListener('click', function (event) {
+
+            event.preventDefault();
+            const selectedFeedbackId = parseInt(item.closest('.suggestion-card').getAttribute("id"));
+            localStorage.setItem("selectedFeedbackId", selectedFeedbackId);
+            window.location.href = "feedback-content.html";
         });
     });
-});
+}
 
-function getID(){
-    
+function filterCategory(filter) {
+    let article = document.querySelectorAll(".suggestion-card");
+
+    article.forEach(e =>{
+        
+    });
+}
+
+function filterBtn () {
+
 }
