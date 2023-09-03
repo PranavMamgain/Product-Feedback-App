@@ -94,14 +94,32 @@ function getFeedbackId() {
     });
 }
 
-function filterCategory(filter) {
-    let article = document.querySelectorAll(".suggestion-card");
+// function filterCategory(filter) {
+//     let article = document.querySelectorAll(".suggestion-card");
 
-    article.forEach(e =>{
-        
+//     article.forEach(e =>{
+
+//     });
+// }
+
+function filterCategory() {
+    const buttons = document.querySelectorAll(".filter-btn");
+    const elements = document.querySelectorAll(".suggestion-card");
+    console.log(buttons, elements);
+
+    buttons.forEach(button =>{
+        button.addEventListener('click', () =>{
+            const targetValue = button.getAttribute("data-target-value");
+
+            elements.forEach(element =>{
+                element.style.display = "none";
+            });
+
+            const targetElement = document.querySelectorAll(`[data-selector=${targetValue}]`);
+            console.log(targetElement);
+            targetElement.forEach(e=>{
+                e.style.display="flex";
+            });
+        });
     });
-}
-
-function filterBtn () {
-
 }
