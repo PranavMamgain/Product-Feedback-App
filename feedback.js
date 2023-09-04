@@ -115,7 +115,7 @@ function filterCategory() {
                 element.style.display = "none";
             });
 
-            const targetElement = document.querySelectorAll(`[data-selector=${targetValue}]`);
+            const targetElement = document.querySelector(`[data-selector=${targetValue}]`);
             console.log(targetElement);
             targetElement.forEach(e=>{
                 e.style.display="flex";
